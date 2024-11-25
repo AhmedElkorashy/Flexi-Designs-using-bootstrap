@@ -1,0 +1,87 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --main-color: ;
+}
+nav .navbar-brand {
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.my-hover span {
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0b5ed7;
+  --bs-btn-hover-border-color: #0a58ca;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  box-shadow: 0 0 0 7px rgba(0, 0, 255, 0.418);
+  background-color: blue;
+  border-radius: 50%;
+  transition: all 0.7;
+}
+
+.my-hover:hover span {
+  --bs-btn-hover-color: #fff;
+  box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.418);
+  --bs-btn-hover-bg: #0b5dd76e;
+  --bs-btn-hover-border-color: #0a57ca9f;
+}
+
+.container .item {
+  border: blue solid 3px;
+
+  border-radius: 5px;
+  h4::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 2px;
+    bottom: -15%;
+    left: 50%;
+    background-color: red;
+    transform: translatex(-50%);
+  }
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+}
+.carousel-indicators [data-bs-target] {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  text-indent: 0;
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: block;
+  }
+}
+.item-figure {
+  &:hover .my-item {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  &:hover img {
+    filter: blur(3px);
+    transition: all 0.5;
+  }
+  .my-item {
+    inset: 0.625rem;
+    transition: all 0.5;
+    opacity: 0;
+  }
+}
